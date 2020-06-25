@@ -126,6 +126,7 @@ def delete_author(request):
     #删除作者与书籍的关联表及作者表
     del_obj.delete()
     return redirect("/author_list/")
+#编辑作者
 def edit_author(request):
     if request.method =="POST":
         #获取新名字和id
@@ -145,3 +146,8 @@ def edit_author(request):
     edit_obj=models.Author.objects.get(id=edit_id)
     ret = models.Book.objects.all()
     return render(request,"edit_author.html",{"author":edit_obj,"book_list":ret})
+
+
+#模板语言测试
+def t_test(request):
+    pass
