@@ -150,4 +150,24 @@ def edit_author(request):
 
 #模板语言测试
 def t_test(request):
-    pass
+    name="小明"
+    name1=""
+    name2=[1,2,3,4]
+    name3=10240
+    name4="django"
+    name5=34111
+    name6="<a href='#'>点我</a>"
+    name7="uplooking"
+    return render(
+        request,
+        "t_test.html",
+        {"name":name,
+        "name1":name1,
+        "name2":name2,
+        "name3":name3,
+        "name4":name4,
+        "name5":name5,
+        "name6":name6,
+         "name7":name7
+         }
+    )

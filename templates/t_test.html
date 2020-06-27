@@ -6,5 +6,21 @@
 </head>
 <body>
 <h1>模板语言测试</h1>
+{{ name }}
+<p></p>
+{{ name1|default:"nothing" }}
+<p>{{ name2|length }}</p>
+<p>{{ name3|filesizeformat }}</p>
+<p>{{ name4|slice:"1:-1" }}</p>
+<p>{{ name5|date:"Y-m-d H:i:s" }}</p>
+<p>{{ name6|safe }}</p>
+{% load  app001_filters %}
+{{ name7|cut:"1" }}
+{{ name7|addsb }}
+<u1>
+{% for foo in name2 %}
+    <li>{{ foo }}</li>
+{% endfor %}
+</u1>
 </body>
 </html>
